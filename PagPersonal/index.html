@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/jc-icono.png">
+    <title>Juan Pablo Bruno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <script type="importmap">{
+        "imports": {
+            "three": "https://threejs.org/build/three.module.js"
+        }
+    }</script>
+    <script type="module" src="script.js" defer></script>
+    <script src="base.js" defer></script>
+
+<body>
+    <canvas id="c"></canvas>
+    <main>
+        <div class="contenido">
+            <div class="intro">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#proyectos">Projects</a></li>
+                        <li><a href="#intereses">Interest</a></li>
+                        <li><a href="#contacto">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <h1 class="jersey-15-regular">Hi, I'm @JuampiCode</h1>
+
+                <p class="presentacion">Hola, soy Juan Pablo Bruno, estudiante de ingeniería en sistemas con pasión por
+                    el desarrollo full stack y la creación de aplicaciones web emocionantes y funcionales.</p>
+            </div>
+
+            <div id = "intereses" class="intereses">
+                <h3>Intereses</h3>
+                <h4>Deportes 🎾 🏉 🧘🏼‍♂️</h4>
+                <p>Apasionado por el movimiento, los deportes son una parte esencial de mi vida.
+                    Mi primer amor fue el Tenis que me enseñó la constancia, fijar metas y la superación personal.
+                    Luego vino el Rugby que me atrajo por su espíritu de equipo, la adrenalina y el respeto.
+                    Y el más reciente fue el Yoga donde descubrí un lugar de relajación, conexión mente-cuerpo y estar
+                    en el momento presente.
+                </p>
+                <h4>Tecnología 💻</h4>
+                <p>El mundo tecnológico es para mí una fuente infinita de posibilidades y creatividad. Veo la tecnología
+                    como un puente que nos conecta globalmente, permitiéndonos comunicarnos e innovar en un espacio
+                    colaborativo. Es una herramienta poderosa que impulsa el progreso y la transformación a nivel
+                    mundial. Quiero ser parte de esta revolución y contribuir al progreso mundial.</p>
+                <h4>Arte 🎥 🎨</h4>
+                <p>Desde mi infancia, el cine ha sido una pasión que me ha permitido descubrir el poder de las historias para conectar y emocionarnos. Para mí, el cine es mucho más que entretenimiento; es un medio para explorar emociones profundas y provocar reflexión sobre la vida y el mundo que nos rodea. De manera similar, la música ha sido una parte fundamental de mi vida, alimentando mi alma y brindándome una conexión única con el mundo. Encuentro en cada obra de arte, ya sea una película, una canción, una pintura o una escultura, una nueva perspectiva y una oportunidad para explorar emociones y pensamientos. Creo firmemente en el poder del arte para transformar y enriquecer nuestras vidas de formas inimaginables.</p>
+            </div>
+
+            <div class="experiencia">
+                <h3>Experiencia Académica</h3>
+                <p>Durante mi carrera universitaria en UTN FRBA, tuve la oportunidad de cursar materias que contribuyeron a
+                    construir una base sólida de conocimientos. Destaco especialmente áreas como Sistemas Operativos,
+                    Gestión de Datos, Diseño de Sistemas, Paradigmas de Programación, UX/UI y Ciberseguridad, las cuales
+                    ampliaron mi comprensión de
+                    la informática y me prepararon para enfrentar desafíos complejos en el mundo tecnológico.</p>
+            </div>
+
+            <div id = "proyectos" class="proyectos">
+                <div class="txt-proyectos">
+                    <h3>Proyectos</h3>
+                    <p>Trabajé en varios proyectos personales y académicos que me permitieron aplicar mis habilidades y conocimientos. Estos son algunos de ellos</p>
+                </div>
+                <div class="carousel">
+                    <div class="carousel-container">
+                        <div class="proyect-card">
+                            <h4>Inspira Bs</h4>
+                            <img src="images/sangre-inspira.png" alt="Cuadro Contrastes-Vedova,Emilio">
+                            <p>Galeria de arte virtual</p>
+                            <a href="https://inspirabs.netlify.app/" target="_blank">Open</a>
+                        </div>
+                        <div class="proyect-card">
+                            <h4>Web Personal</h4>
+                            <img src="images/pag.png" alt="imagen pagina personal">
+                            <p>Aplicamos Flexbox y Grid</p>
+                            <a href="#" target="_blank">Open</a>
+                        </div>
+                        <div class="proyect-card">
+                            <h4>Simulación de SO</h4>
+                            <img src="images/soLinux.png" alt="imagen sistema operativo linux">
+                            <p>Realizado en equipo utilizando <strong>C</strong>. El proyecto involucró la implementación de diversos conceptos y estructuras de datos, así como la resolución de problemas relacionados con la gestión de procesos, memoria y recursos del sistema</p>
+                            <a href="https://github.com/MaquedaPaul/tp-2023-1c-AMCSO/tree/main" target="_blank">Open</a>
+                        </div>
+                        <div class="proyect-card">
+                            <h4>Migracion BD</h4>
+                            <img src="/images/db.jpg" alt="Imagen base de datos">
+                            <p>Diseño y desarrollo de un sistema de gestión de datos completo, incluyendo modelado de datos, scripting de bases de datos y creación de modelos de Business Intelligence</p>
+                            <a href="https://github.com/juampibruno/GDD-TP" target="_blank">Open</a>
+                        </div>
+            
+
+                        <!-- Agrega más imágenes si es necesario -->
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn prev"><span class="material-symbols-outlined">
+                                arrow_back_ios
+                            </span></button>
+                        <button class="btn next"><span class="material-symbols-outlined">
+                                arrow_forward_ios
+                            </span></button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="contacto" class="contacto">
+                <h3>Contact</h3>
+                <div class="linea"></div>
+                <div class="contenedor-redes">
+                    <div>
+                        <a href="mailto:brunojuanpablo02@gmail.com" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg"
+                                alt="Correo electrónico" class="ico-redes">
+                        </a>
+                    </div>
+                    <div class="icono ln">
+                        <a href="https://www.linkedin.com/in/tu_perfil_de_linkedin" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                                alt="LinkedIn" class="ico-redes ln">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/JuampiCode" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/640px-Instagram_logo_2022.svg.png"
+                                alt="LinkedIn" class="ico-redes">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

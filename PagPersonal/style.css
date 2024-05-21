@@ -1,0 +1,293 @@
+* {
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    line-height: 1.7;
+}
+
+html,body {
+    margin: 0;
+    height: 100%;
+}
+
+/* Fonts  */
+
+.jersey-15-regular {
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fuentes/SF-Pro.ttf');
+}
+  
+
+/* ICONS */
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+#c {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    z-index: -1;
+}
+
+.contenido {
+    position: absolute;
+    z-index: 10;
+    color: white;
+    width: 100vw;
+    
+   
+}
+
+p, a{
+    font-family: 'SF Pro';
+    font-weight: 200;
+}
+
+h3 {
+    font-family: 'SF Pro';
+    font-weight: 500;
+    font-size: 1.5em;
+    letter-spacing: .009em;
+}
+
+h4 {
+    font-family: 'SF Pro';
+    font-weight: 300;
+    font-size: 1.2em;
+    letter-spacing: .009em;
+}
+
+ul,li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: blue;
+    font-family: Arial, sans-serif;
+}
+
+a:hover {
+    color: red;
+}
+
+
+ul {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    position: sticky;
+}
+
+li {
+    padding: 10px 20px
+}
+
+h1 {
+    font-family: "ExoSpace";
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -2px;
+    word-spacing: -5px;
+    font-size: 5em;
+    text-align: center;
+    margin: auto;
+    margin-top: 25vh;
+    word-break: break-word;
+}
+
+.presentacion {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.intro {
+    height: 150vh;
+}
+
+.intereses, .experiencia, .proyectos {
+    height: 100vh;
+}
+
+.intereses {
+    height: 200vh;
+}
+
+.contacto {
+    height: 50vh;
+}
+.intereses, .experiencia{
+    width: 80%;
+    margin: auto;
+}
+
+h3 {
+    margin-bottom: 16px;
+}
+
+.intereses h4 {
+    margin: 5px 10px;
+}
+
+.intereses p {
+    margin: 0 10px;
+    margin-bottom: 50px;
+}
+
+/* --------------------------------- PROYECTOS SECTION -----------------------*/
+
+.txt-proyectos {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.txt-proyectos p {
+    width: 80%;
+    margin: auto;
+}
+
+.carousel {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel img {
+    width: 80%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .especial {
+    object-fit: contain;
+  }
+
+  .proyect-card {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin: 0 10px;
+    flex-basis: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-family: 'SF Pro';
+    font-weight: 200;
+  }
+
+  .proyect-card h4 {
+    padding: 20px 0;
+    font-size: 2rem;
+    font-family: "SF Pro";
+    font-weight: 100;
+  }
+  
+  .proyect-card p {
+    margin: 10px;
+   padding: 10px; /* Eliminar el margen inferior del párrafo */
+   padding-left: 15px;
+   height: 100px;
+   line-height: 1.1;
+   text-align: center;
+   font-size: 14px;
+  }
+
+  .proyect-card a {
+    padding: 8px 16px;
+    background-color: #1A1A1A;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: white;
+  }
+  
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    align-content: center;
+    margin: 30px 0;
+
+}
+
+.btn {
+    margin: 0 20px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #e37437;
+    color: black
+
+}
+  
+
+/* --------------------------------- PROYECTOS END -----------------------*/
+/* --------------------------------- CONTACTO SECTION -----------------------*/
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    align-content: center;
+    max-width: 350px;
+    margin: auto;
+    font-weight: normal;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    margin-bottom: 30px;
+}
+
+.contacto h3 {
+    font-size: 1.3em;
+    margin-top: 5px;
+
+}
+
+.ln {
+    border-radius: 20px;
+}
+
+.ico-redes {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+
+.contenedor-redes {
+    display: flex;
+}
+
+.linea {
+    width: 80%;
+    height: 1px;
+    background-color: white;
+    margin: 10px 0;
+}   
