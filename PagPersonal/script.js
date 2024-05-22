@@ -78,7 +78,7 @@ function main() {
 
 
 	//Textura
-	const cuadroTexture = new THREE.TextureLoader().load("code.jpg");
+	const cuadroTexture = new THREE.TextureLoader().load("images/code.jpg");
 
 // Torus
 // const r =  2;  
