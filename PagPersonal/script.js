@@ -9,7 +9,7 @@ function main() {
 
 	renderer.setPixelRatio(window.devicePixelRatio);
 	renderer.setSize(window.innerWidth, window.innerHeight);
-	
+
 
 	const scene = new THREE.Scene();
 
@@ -25,7 +25,7 @@ function main() {
 	const controls = new OrbitControls(camera, renderer.domElement);
 	camera.position.set(0, 0, 30);
 	controls.update();
-	
+
 
 
 	//LIGTHS 
@@ -41,7 +41,7 @@ function main() {
 		scene.add(ambientLight);
 
 		const gridHelper = new THREE.GridHelper(200, 50);
-		// scene.add(gridHelper);
+		//scene.add(gridHelper);
 
 	}
 
@@ -78,29 +78,17 @@ function main() {
 
 
 	//Textura
-	const cuadroTexture = new THREE.TextureLoader().load("code.jpg");
 
-// Torus
-// const r =  2;  
-// const tubeRadius =  1.5;  
-// const radialSegments =  8;  
-// const tubularSegments =  50;  
-// const p = 18;  
-// const q =  1;  
-// const torusGeometry = new THREE.TorusKnotGeometry(
-// 	r, tubeRadius, tubularSegments, radialSegments, p, q );
+	const cuboTexture = new THREE.TextureLoader().load('/images/code.jpg');
+	const materialCubo = new THREE.MeshBasicMaterial({ map: cuboTexture });
 
-// const torusMaterial = new THREE.MeshBasicMaterial( { map: cuadroTexture } );
-// const torus = new THREE.Mesh( torusGeometry, torusMaterial );
-// torus.position.set(5, -20, 0);
-// scene.add( torus );
+
 
 	const box = new THREE.BoxGeometry(1, 1, 1);
-	const materialBox = new THREE.MeshBasicMaterial({ map: cuadroTexture });
-	const cuadro = new THREE.Mesh(box, materialBox);
-	cuadro.position.set(0, 0, 0);
-	scene.add(cuadro);
-	
+	const cubo = new THREE.Mesh(box, materialCubo);
+	cubo.position.set(0, 0, 0);
+	scene.add(cubo);
+
 
 
 
@@ -123,22 +111,19 @@ function main() {
 
 	// Scroll Animation
 
-function moveCamera() {
-	const t = document.body.getBoundingClientRect().top;
+	function moveCamera() {
+		const t = document.body.getBoundingClientRect().top;
 
 
-	// torus.rotation.y += 0.02;
-	// torus.rotation.z += 0.03;
+		cubo.rotation.x += 0.05;
+		cubo.rotation.y += 0.03;
 
-	cuadro.rotation.x += 0.05;
-	cuadro.rotation.y += 0.03;
-  
-	camera.position.z = t * -0.01;
-	camera.position.x = t * -0.0002;
-	camera.rotation.y = t * -0.0002;
-  }
+		camera.position.z = t * -0.01;
+		camera.position.x = t * -0.0002;
+		camera.rotation.y = t * -0.0002;
+	}
 
-  document.body.onscroll = moveCamera;
+	document.body.onscroll = moveCamera;
 	moveCamera();
 
 
@@ -184,3 +169,48 @@ function moveCamera() {
 }
 
 main();
+
+
+//---------------------------------------------------------CODIGO CARROUSEL------------------------------------------------------------
+let carouselContainer = document.querySelector('.carousel-container');
+let cards = document.querySelectorAll('.proyect-card');
+let currentIndex = 0;
+let totalCards = cards.length;
+let cardWidth = cards[0].clientWidth;
+
+function slideNext() {
+	if (currentIndex < totalCards - 1) {
+		currentIndex++;
+	} else {
+		currentIndex = 0;
+	}
+	updateSlide();
+}
+
+function slidePrev() {
+	if (currentIndex > 0) {
+		currentIndex--;
+	} else {
+		currentIndex = totalCards - 1;
+	}
+	updateSlide();
+}
+
+function updateSlide() {
+	let newPosition = -currentIndex * (cardWidth + 20); // por 10 de margen de cada lado
+	carouselContainer.style.transform = `translateX(${newPosition}px)`;
+}
+
+// Agregar eventos de click a los botones de navegación si los tienes
+const nextButton = document.querySelector('.next');
+const prevButton = document.querySelector('.prev');
+
+console.log(nextButton);
+console.log(prevButton);
+
+nextButton.addEventListener('click', slideNext);
+prevButton.addEventListener('click', slidePrev);
+
+
+// O puedes agregar un temporizador para que el carrusel cambie automáticamente
+// setInterval(slideNext, 5000); // Cambia cada 5 segundos (5000 milisegundos)
