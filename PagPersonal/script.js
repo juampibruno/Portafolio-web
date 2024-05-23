@@ -67,13 +67,20 @@ function init() {
   esfera = new THREE.Points(geometry, material);
   scene.add(esfera);
 
+  
   // CUBO
-  const cuboTexture = new THREE.TextureLoader().load('images/code.jpg');
-  const materialCubo = new THREE.MeshBasicMaterial({ map: cuboTexture });
-  const box = new THREE.BoxGeometry(1, 1, 1);
-  cubo = new THREE.Mesh(box, materialCubo);
-  cubo.position.set(0, 0, 0);
-  scene.add(cubo);
+const loadManager = new THREE.LoadingManager();
+const loader = new THREE.TextureLoader(loadManager);
+
+const materialCubo = new THREE.MeshBasicMaterial( {map: loader.load('images/code.jpg')} );
+const geometryCubo = new THREE.BoxGeometry(1, 1, 1);
+
+loadManager.onLoad = () => {
+	cubo = new THREE.Mesh(geometryCubo, materialCubo);
+	cubo.position.set(0, 0, 0);
+	scene.add(cubo);
+  };
+
 
   window.addEventListener('resize', onWindowResize);
 }
