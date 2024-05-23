@@ -59,7 +59,7 @@ function init() {
 	scene.add(points);
 
 	// ESFERA
-	const radius = 15;
+	const radius = 16;
 	const widthSegments = 32;
 	const heightSegments = 16;
 	const geometry = new THREE.SphereGeometry(radius, widthSegments, heightSegments);
