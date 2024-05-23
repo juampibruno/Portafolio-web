@@ -91,8 +91,8 @@ function onWindowResize() {
 function moveCamera() {
 	const t = document.body.getBoundingClientRect().top;
 	if (torus) {
-		torus.rotation.x -= 0.005;
-		torus.rotation.y -= 0.005;
+		torus.rotation.x -= 0.02;
+		torus.rotation.y -= 0.01;
 	}
 	camera.position.z = 30 - t * 0.01;
 	camera.position.x = t * 0.0002;
