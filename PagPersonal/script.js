@@ -70,8 +70,8 @@ function init() {
 
 	// TorusKnot
 
-	const geometryTorus = new THREE.TorusKnotGeometry(5, 3, 36, 16, 2, 3);
-	const materialTorus = new THREE.MeshStandardMaterial({ color: "red", metalness: 0.9, roughness: 0.1, flatShading: true });
+	const geometryTorus = new THREE.TorusKnotGeometry(4, 1.5, 8, 64, 2, 3);
+	const materialTorus = new THREE.MeshStandardMaterial({ color: "red", metalness: 0.8, roughness: 0.1, flatShading: true });
 	torus = new THREE.Mesh(geometryTorus, materialTorus);
 	torus.position.set(0, 0, 0);
 	scene.add(torus);

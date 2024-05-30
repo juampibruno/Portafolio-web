@@ -19,10 +19,6 @@ html,body {
     font-style: normal;
   }
 
-@font-face {
-    font-family: 'SF Pro';
-    src: url('fuentes/SF-Pro.ttf');
-}
   
 
 /* ICONS */
@@ -55,19 +51,19 @@ html,body {
 }
 
 p, a{
-    font-family: 'SF Pro';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 200;
 }
 
 h3 {
-    font-family: 'SF Pro';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
     font-size: 1.5em;
     letter-spacing: .009em;
 }
 
 h4 {
-    font-family: 'SF Pro';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 300;
     font-size: 1.2em;
     letter-spacing: .009em;
@@ -79,7 +75,7 @@ ul,li {
 a {
     text-decoration: none;
     color: blue;
-    font-family: Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a:hover {
