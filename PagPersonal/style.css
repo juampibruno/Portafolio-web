@@ -288,3 +288,22 @@ h3 {
     background-color: white;
     margin: 10px 0;
 }   
+
+
+@media only screen and (max-width: 410px) {
+    
+    h1 {
+        font-size: 3em;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .proyect-card p {
+        font-size: 12px;
+    }
+
+
+
+}
